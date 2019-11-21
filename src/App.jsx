@@ -1,12 +1,27 @@
-import React from 'react';
-import './App.scss';
+import React, { Component } from "react";
+import "./App.scss";
+import { getHotelDetails } from "./utils/apiCalls";
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      currentHotel: {}
+    };
+  }
 
-    </div>
-  );
+  componentDidMount() {
+    this.setCurrentHotel();
+  }
+
+  setCurrentHotel = async () => {
+    const hotel = await getHotelDetails();
+    this.setState({ currentHotel: hotel });
+  };
+
+  render() {
+    return <div className="App"></div>;
+  }
 }
 
 export default App;
