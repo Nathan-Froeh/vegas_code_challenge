@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.scss";
 import { getHotelDetails } from "./utils/apiCalls";
+import Hotel from './Hotel/Hotel';
 
 class App extends Component {
   constructor() {
@@ -20,7 +21,11 @@ class App extends Component {
   };
 
   render() {
-    return <div className="App"></div>;
+    return (
+    <div className="App">
+      <Hotel currentHotel={this.state.currentHotel}/>
+    </div>
+    );
   }
 }
 
