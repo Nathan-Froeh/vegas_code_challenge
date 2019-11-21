@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {HotelSide} from '../HotelSide/HotelSide';
+import {HotelMain} from '../HotelMain/HotelMain';
 
 export class Hotel extends Component {
   constructor() {
@@ -13,9 +14,7 @@ export class Hotel extends Component {
     return (
       <div>
         <HotelSide/>
-        <main>
-
-        </main>
+        <HotelMain/>
         
       </div>
     )
