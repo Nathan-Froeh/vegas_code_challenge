@@ -22,8 +22,17 @@ class HotelMain extends Component {
       phoneNumber,
       location,
       description,
-      details
+      details,
+      media
     } = this.props.hotel;
+
+    const detailsTab = details.map((detail, key) => (
+      <li key={key}>
+        <strong>{detail.label}:</strong>
+        <p>{detail.value}</p>
+      </li>
+    ));
+
     return (
       <main className="hotel-main">
         <section className="header">
@@ -38,7 +47,6 @@ class HotelMain extends Component {
               <p>Best Price Guarantee</p>
             </div>
           </section>
-
           <div className="price">
             <strong>{`$${price}`}</strong>
             <p>HOTEL ROOMS FROM</p>
@@ -64,6 +72,11 @@ class HotelMain extends Component {
             LOCATION
           </button>
         </section>
+        {this.state.view === "DESCRIPTION" && <p>{description}</p>}
+        {this.state.view === "DETAILS" && <ul>{detailsTab}</ul>}
+        {this.state.view === "LOCATION" && (
+          <img src={require("../utils" + media[1].href)} alt="Hotel map view" />
+        )}
       </main>
     );
   }
