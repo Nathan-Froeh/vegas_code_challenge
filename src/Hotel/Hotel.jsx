@@ -16,7 +16,7 @@ export class Hotel extends Component {
     return (
       <div className='Hotel'>
         <HotelSide productImage={media}/>
-        <HotelMain/>
+        <HotelMain hotel={this.props.currentHotel}/>
         
       </div>
     )
