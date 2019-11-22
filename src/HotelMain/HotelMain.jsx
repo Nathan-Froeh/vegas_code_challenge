@@ -9,19 +9,19 @@ class HotelMain extends Component {
   }
 
   render() {
-    const {name} = this.props.hotel;
+    const {name, starRating, price, phoneNumber, location, description, details} = this.props.hotel;
     return (
       <main>
         <div>
           <h1>{name}</h1>
-          <p>stars</p>
+          <p>{starRating}</p>
           <div>
-            <p>location</p>
-            <p>phone</p>
-            <p>message</p>
+            <p>{location.areaName}</p>
+            <p>{phoneNumber}</p>
+            <p>Best Price Guarantee</p>
           </div>
           <p>
-            <strong>price</strong>
+            <strong>{price}</strong>
             HOTEL ROOMS FROM
           </p>
         </div>
@@ -29,3 +29,5 @@ class HotelMain extends Component {
     )
   }
 }
+
+export default HotelMain;

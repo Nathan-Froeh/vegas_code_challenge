@@ -23,7 +23,10 @@ class App extends Component {
   render() {
     return (
     <div className="App">
-      <Hotel currentHotel={this.state.currentHotel}/>
+      {
+        this.state.currentHotel.name !== undefined &&
+        <Hotel currentHotel={this.state.currentHotel}/>
+      }
     </div>
     );
   }

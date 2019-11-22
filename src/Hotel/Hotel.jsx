@@ -17,7 +17,6 @@ export class Hotel extends Component {
       <div className='Hotel'>
         <HotelSide productImage={media}/>
         <HotelMain hotel={this.props.currentHotel}/>
-        
       </div>
     )
   }
