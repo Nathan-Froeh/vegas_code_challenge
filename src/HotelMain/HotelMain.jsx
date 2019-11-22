@@ -72,7 +72,9 @@ class HotelMain extends Component {
             LOCATION
           </button>
         </section>
-        {this.state.view === "DESCRIPTION" && <p>{description}</p>}
+        {this.state.view === "DESCRIPTION" && (
+          <p className="description">{description}</p>
+        )}
         {this.state.view === "DETAILS" && <ul>{detailsTab}</ul>}
         {this.state.view === "LOCATION" && (
           <img src={require("../utils" + media[1].href)} alt="Hotel map view" />

@@ -47,4 +47,24 @@
       border-bottom: #7b3c9b solid 5px;
     }
   }
+
+  ul {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 10px;
+    li {
+      width: 100%;
+      margin: 10px 0 10px 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: start;
+      flex-wrap: wrap;
+      strong,
+      p {
+        width: 100%;
+        text-align: start;
+      }
+    }
+  }
 }
