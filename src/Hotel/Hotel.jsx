@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HotelSide from '../HotelSide/HotelSide';
 import HotelMain from '../HotelMain/HotelMain';
+import './Hotel.scss';
 
 export class Hotel extends Component {
   constructor() {
@@ -13,7 +14,7 @@ export class Hotel extends Component {
     console.log(this.props.currentHotel)
     const {media} = this.props.currentHotel;
     return (
-      <div>
+      <div className='Hotel'>
         <HotelSide productImage={media}/>
         <HotelMain/>
         
