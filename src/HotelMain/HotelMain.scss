@@ -28,4 +28,23 @@
       }
     }
   }
+
+  .view-select {
+    width: 100%;
+
+    button {
+      height: 50px;
+      width: 33%;
+      background: #9351b5;
+      color: #ccbad6;
+      font-size: 15px;
+      border: none;
+      border-bottom: #9351b5 solid 5px;
+    }
+
+    .active {
+      color: white;
+      border-bottom: #7b3c9b solid 5px;
+    }
+  }
 }

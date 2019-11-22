@@ -5,8 +5,13 @@ class HotelMain extends Component {
   constructor() {
     super()
     this.state={
-      view: 'description'
+      view: 'DESCRIPTION'
     }
+  }
+
+  handleView = (e) => {
+    e.preventDefault()
+    this.setState({view: e.target.innerText})
   }
 
   render() {
@@ -31,6 +36,17 @@ class HotelMain extends Component {
             <strong>{`$${price}`}</strong>
             <p>HOTEL ROOMS FROM</p>
           </div>
+        </section>
+        <section className='view-select'>
+          <button className={`${this.state.view === 'DESCRIPTION' ? 'active' : ''}`}
+          onClick={this.handleView}
+          >DESCRIPTION</button>
+          <button className={`${this.state.view === 'DETAILS' ? 'active' : ''}`}
+          onClick={this.handleView}
+          >DETAILS</button>
+          <button className={`${this.state.view === 'LOCATION' ? 'active' : ''}`}
+          onClick={this.handleView}
+          >LOCATION</button>
         </section>
       </main>
     )
