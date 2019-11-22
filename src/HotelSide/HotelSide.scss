@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'icons';
+  unicode-range: "&#x2190;";
+  src: local("../utils/icons.svg") format("svg")
+}
+
+img {
+  font-family: icons;
+}

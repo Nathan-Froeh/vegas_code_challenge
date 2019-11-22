@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import {HotelSide} from '../HotelSide/HotelSide';
-import {HotelMain} from '../HotelMain/HotelMain';
+import HotelSide from '../HotelSide/HotelSide';
+import HotelMain from '../HotelMain/HotelMain';
 
 export class Hotel extends Component {
   constructor() {
@@ -11,9 +11,10 @@ export class Hotel extends Component {
   }
   render() {
     console.log(this.props.currentHotel)
+    const {media} = this.props.currentHotel;
     return (
       <div>
-        <HotelSide/>
+        <HotelSide productImage={media}/>
         <HotelMain/>
         
       </div>
