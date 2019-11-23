@@ -11,7 +11,6 @@ export class Hotel extends Component {
     }
   }
   render() {
-    console.log(this.props.currentHotel)
     const {media} = this.props.currentHotel;
     return (
       <div className='Hotel'>

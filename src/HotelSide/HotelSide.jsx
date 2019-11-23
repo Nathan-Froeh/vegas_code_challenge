@@ -31,7 +31,6 @@ class HotelSide extends Component {
   }
 
   sortHotels = (hotels) => {
-    console.log(hotels[0])
     return hotels.sort((a, b) => {
       const nameA = a.name.toUpperCase()
       const nameB = b.name.toUpperCase()
