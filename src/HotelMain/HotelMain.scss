@@ -52,7 +52,7 @@
 
   ul {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding: 10px;
     li {
@@ -60,7 +60,7 @@
       margin: 10px 0 10px 0;
       list-style-type: none;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       flex-wrap: wrap;
       strong,
       p {
