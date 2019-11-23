@@ -50,6 +50,12 @@
     }
   }
 
+  .description {
+    margin: 10px 2% 0 2%;
+    text-align: start;
+    line-height: 1.6;
+  }
+
   ul {
     display: flex;
     justify-content: flex-start;
@@ -68,5 +74,10 @@
         text-align: start;
       }
     }
+  }
+
+  .short {
+    height: 200px;
+    overflow: hidden;
   }
 }
