@@ -7,7 +7,7 @@ class HotelSide extends Component {
   constructor() {
     super()
     this.state={
-      hotelList: {}
+      hotelList: []
     }
   }
 
@@ -31,6 +31,7 @@ class HotelSide extends Component {
   }
 
   sortHotels = (hotels) => {
+    console.log(hotels[0])
     return hotels.sort((a, b) => {
       const nameA = a.name.toUpperCase()
       const nameB = b.name.toUpperCase()
@@ -45,6 +46,12 @@ class HotelSide extends Component {
 
   render() {
     const {productImage} = this.props
+    const hotelList = this.state.hotelList.map((hotel, key) => (
+      <li key={key}>
+        <p>{hotel.name}</p>
+        <p>${hotel.price}</p>
+      </li>
+    ))
     return (
       <aside>
         <button>SEE ALL LAS VEGAS HOTELS</button>
@@ -52,6 +59,7 @@ class HotelSide extends Component {
           productImage &&
           <img src={require('../utils' + productImage[0].href)} alt="Hotel"/>
         }
+        <ul>{hotelList}</ul>
         
       </aside>
     )
