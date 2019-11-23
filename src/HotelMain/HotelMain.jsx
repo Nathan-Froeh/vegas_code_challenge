@@ -44,7 +44,7 @@ class HotelMain extends Component {
           <section className="sub-head">
             <div className="name">
               <h1>{name}</h1>
-              <span>{starRating}</span>
+              <p className='rating'>{starRating}</p>
             </div>
             <div className="area">
               <p>{location.areaName}</p>
