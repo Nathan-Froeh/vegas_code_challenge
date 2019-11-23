@@ -48,12 +48,12 @@ class HotelSide extends Component {
     const {productImage} = this.props
     const hotelList = this.state.hotelList.map((hotel, key) => (
       <li key={key}>
-        <p>{hotel.name}</p>
-        <p>${hotel.price}</p>
+        <p className='name'>{hotel.name}</p>
+        <p className='price'>${hotel.price}</p>
       </li>
     ))
     return (
-      <aside>
+      <aside className='hotel-side'>
         <button>SEE ALL LAS VEGAS HOTELS</button>
         {
           productImage &&

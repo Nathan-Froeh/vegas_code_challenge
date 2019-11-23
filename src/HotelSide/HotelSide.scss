@@ -1,9 +1,28 @@
-@font-face {
-  font-family: 'icons';
-  unicode-range: "&#x2190;";
-  src: local("../utils/icons.svg") format("svg")
-}
+.hotel-side {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-img {
-  font-family: icons;
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  ul {
+    width: 80%;
+    background: #d0cfd1;
+    margin-top: 30px;
+    li { 
+      display: flex;
+      list-style-type: none;
+      margin: 5px 0 5px 10px;
+      .name {
+        width: 70%;
+        text-align: start;
+      }
+      .price {
+        width: 30%;
+      }
+    }
+  }
 }
