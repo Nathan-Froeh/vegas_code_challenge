@@ -1,0 +1,101 @@
+.hotel-main {
+  width: 100%;
+  padding-top: 60px;
+  .header{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .sub-head {
+      height: 100%;
+      width: 80%;
+
+      .name {
+        align-items: baseline;
+        
+        h1 {
+          font-size: 35px;
+          margin-right: 10px;
+        }
+        .rating {
+          height: 17px;
+        }
+      }
+      div {
+        display: flex;
+      }
+      .area {
+        p {
+          margin-right: 20px;
+        }
+      }
+    }
+    .price {
+      height: 100%;
+      width: 20%;
+      strong {
+        font-size: 45px;
+        color: #f79809;
+      }
+    }
+  }
+
+  .view-select {
+    width: 100%;
+
+    button {
+      height: 50px;
+      width: 33%;
+      background: #9351b5;
+      color: #ccbad6;
+      font-size: 15px;
+      border: none;
+      border-bottom: #9351b5 solid 5px;
+      outline: none;
+    }
+
+    .active {
+      color: white;
+      border-bottom: #7b3c9b solid 5px;
+    }
+  }
+
+  .description {
+    margin: 10px 2% 0 2%;
+    text-align: start;
+    line-height: 1.6;
+  }
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    li {
+      width: 100%;
+      margin: 10px 0 10px 0;
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      strong,
+      p {
+        width: 100%;
+        text-align: start;
+      }
+    }
+  }
+
+  .short {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .extend {
+    height: 20px;
+    font-size: 15px;
+    border: none;
+    color: #9351b5;
+    margin-bottom: 20px;
+  }
+}
