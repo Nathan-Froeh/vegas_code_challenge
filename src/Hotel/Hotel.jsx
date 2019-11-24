@@ -1,24 +1,13 @@
-import React, { Component } from 'react';
-import HotelSide from '../HotelSide/HotelSide';
-import HotelMain from '../HotelMain/HotelMain';
-import './Hotel.scss';
+import React from "react";
+import HotelSide from "../HotelSide/HotelSide";
+import HotelMain from "../HotelMain/HotelMain";
+import "./Hotel.scss";
 
-export class Hotel extends Component {
-  constructor() {
-    super()
-    this.state={
-      view: 'description'
-    }
-  }
-  render() {
-    const {media} = this.props.currentHotel;
-    return (
-      <div className='Hotel'>
-        <HotelSide productImage={media}/>
-        <HotelMain hotel={this.props.currentHotel}/>
-      </div>
-    )
-  }
+export default function Hotel({ currentHotel }) {
+  return (
+    <div className="Hotel">
+      <HotelSide productImage={currentHotel.media} />
+      <HotelMain hotel={currentHotel} />
+    </div>
+  );
 }
-
-export default Hotel

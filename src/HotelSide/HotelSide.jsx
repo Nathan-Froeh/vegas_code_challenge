@@ -1,67 +1,65 @@
-import React, {Component} from 'react';
-import '../utils/icons.svg';
-import './HotelSide.scss';
-import {getHotelList} from '../utils/apiCalls';
+import React, { Component } from "react";
+import "../utils/icons.svg";
+import "./HotelSide.scss";
+import { getHotelList } from "../utils/apiCalls";
 
 class HotelSide extends Component {
   constructor() {
-    super()
-    this.state={
+    super();
+    this.state = {
       hotelList: []
-    }
+    };
   }
 
   componentDidMount() {
-    this.setHotelList()
+    this.setHotelList();
   }
 
   setHotelList = async () => {
-    const hotels = await getHotelList()
-    const uniqueHotels = this.filterHotels(hotels)
-    const sorted = this.sortHotels(uniqueHotels)
-    this.setState({hotelList: sorted})
-  }
+    const hotels = await getHotelList();
+    const uniqueHotels = this.filterHotels(hotels);
+    const sorted = this.sortHotels(uniqueHotels);
+    this.setState({ hotelList: sorted });
+  };
 
-  filterHotels = (hotels) => {
+  filterHotels = hotels => {
     return hotels.list.reduce((acc, hotel) => {
-      const boolean = acc.find(obj => obj.name === hotel.name)
-      if(!boolean) acc.push(hotel)
-      return acc
-    }, [])
-  }
+      const boolean = acc.find(obj => obj.name === hotel.name);
+      if (!boolean) acc.push(hotel);
+      return acc;
+    }, []);
+  };
 
-  sortHotels = (hotels) => {
+  sortHotels = hotels => {
     return hotels.sort((a, b) => {
-      const nameA = a.name.toUpperCase()
-      const nameB = b.name.toUpperCase()
+      const nameA = a.name.toUpperCase();
+      const nameB = b.name.toUpperCase();
       if (nameA < nameB) {
         return -1;
       } else if (nameA > nameB) {
         return 1;
       }
       return 0;
-    })
-  }
+    });
+  };
 
   render() {
-    const {productImage} = this.props
+    const { productImage } = this.props;
     const hotelList = this.state.hotelList.map((hotel, key) => (
       <li key={key}>
-        <p className='name'>{hotel.name}</p>
-        <p className='price'>${hotel.price}</p>
+        <p className="name">{hotel.name}</p>
+        <p className="price">${hotel.price}</p>
       </li>
-    ))
+    ));
     return (
-      <aside className='hotel-side'>
+      <aside className="hotel-side">
         <button>SEE ALL LAS VEGAS HOTELS</button>
-        {
-          productImage &&
-          <img src={require('../utils' + productImage[0].href)} alt="Hotel"/>
-        }
+        {productImage && (
+          <img src={require("../utils" + productImage[0].href)} alt="Hotel" />
+        )}
         <ul>{hotelList}</ul>
-        
       </aside>
-    )
+    );
   }
 }
 

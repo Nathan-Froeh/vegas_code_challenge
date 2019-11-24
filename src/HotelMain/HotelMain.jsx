@@ -11,10 +11,10 @@ class HotelMain extends Component {
   }
 
   handleView = e => {
-    if(e.target.innerText !== 'Strip') {
+    if (e.target.innerText !== "Strip") {
       e.preventDefault();
       this.setState({ view: e.target.innerText, extended: false });
-    } else this.setState({view: 'LOCATION', extended: false })
+    } else this.setState({ view: "LOCATION", extended: false });
   };
 
   handleExtend = () => {
@@ -46,7 +46,7 @@ class HotelMain extends Component {
           <section className="sub-head">
             <div className="name">
               <h1>{name}</h1>
-              <p className='rating'>{starRating}</p>
+              <p className="rating">{starRating}</p>
             </div>
             <div className="area">
               <p onClick={this.handleView}>{location.areaName}</p>
@@ -96,12 +96,11 @@ class HotelMain extends Component {
         {this.state.view === "LOCATION" && (
           <img src={require("../utils" + media[1].href)} alt="Hotel map view" />
         )}
-        {
-          this.state.view !== 'LOCATION' &&
-          <button className='extend' onClick={this.handleExtend}>{`view ${
+        {this.state.view !== "LOCATION" && (
+          <button className="extend" onClick={this.handleExtend}>{`view ${
             this.state.extended === true ? "less" : "more"
           } details`}</button>
-        }
+        )}
       </main>
     );
   }
