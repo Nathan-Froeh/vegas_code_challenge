@@ -7,7 +7,7 @@ install CORS bypass browser add-on in browser of your choice
 ## Install
 run `git clone https://github.com/Nathan-Froeh/vegas_code_challenge.git` in the terminal
 
-in the terminal go to /VEGAS_CODE_CHALLENGE
+in the terminal go to /vegas_code_challenge
 
 run `npm i` in the terminal
 
